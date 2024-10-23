@@ -6,6 +6,7 @@ function PokemonCard() {
 				alt=""
 			/>
 			<figcaption> Bulbasaur</figcaption>
+			
 		</figure>
 	);
 }
