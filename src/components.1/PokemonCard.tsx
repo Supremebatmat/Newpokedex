@@ -1,9 +1,18 @@
+
+
 interface PokemonCard {
 	name: string;
 	imgSrc: string;
 }
 
 function PokemonCard({ pokemon }) {
+
+
+
+function PokemonCard({pokemon}) {
+	
+
+ main
 	return (
 		<figure>
 			{pokemon.imgSrc ? (
