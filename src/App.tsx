@@ -14,7 +14,9 @@ const pokemonList = [
 ];
 
 function hello() {
-	return <PokemonCard pokemon= { pokemonList[1]}/>;
+
+	return <PokemonCard pokemon={pokemonList[1]} />;
+
 }
 
 export default hello;
