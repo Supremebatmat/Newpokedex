@@ -1,11 +1,22 @@
-interface PokemonCard {
-	pokemon: {
-		name: string;
-		imgSrc?: string;
-	};
-}
+
+
 
 function PokemonCard({ pokemon }: PokemonCard) {
+
+  pokemon: {
+    name: string;
+    imgSrc: string;
+  };
+}
+
+
+function PokemonCard({ pokemon }) {
+
+
+
+function PokemonCard({pokemon}) {
+	
+
 	return (
 		<figure>
 			{pokemon.imgSrc ? (

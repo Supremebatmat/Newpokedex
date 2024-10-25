@@ -2,6 +2,7 @@ import "./App.css";
 import PokemonCard from "./components.1/PokemonCard";
 import { useState } from "react";
 
+
 const pokemonList = [
 	{
 		name: "bulbasaur",
@@ -28,8 +29,16 @@ const pokemonList = [
 	},
 ];
 
+
 function App() {
 	const [pokemonIndex, setPokemonIndex] = useState(0);
+=======
+function hello() {
+
+	return <PokemonCard pokemon={pokemonList[1]} />;
+
+}
+
 
 	function handleClickPreviews() {
 		setPokemonIndex(pokemonIndex - 1);
