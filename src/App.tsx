@@ -1,6 +1,6 @@
 import "./App.css";
-import PokemonCard from "./components.1/PokemonCard";
 import { useState } from "react";
+import PokemonCard from "./components.1/PokemonCard";
 
 
 const pokemonList = [
@@ -40,34 +40,13 @@ function hello() {
 }
 
 
-	function handleClickPreviews() {
-		setPokemonIndex(pokemonIndex - 1);
-	}
+	return (<>
+		{pokemonList.map((pokemon, index)=> (
+			
+			<button  onClick={()=> setPokemonIndex(index)} key={pokemon.name}> {pokemon.name}</button>))}
+			<PokemonCard pokemon={pokemonList[pokemonIndex]}/>
 
-	function handleClickNext() {
-		setPokemonIndex(pokemonIndex + 1);
-	}
-
-	return (
-		<div>
-			<PokemonCard pokemon={pokemonList[pokemonIndex]} />
-			{pokemonIndex > 0 ? (
-				<button type="button" onClick={handleClickPreviews}>
-					{" "}
-					Precedent{" "}
-				</button>
-			) : (
-				""
-			)}
-			{pokemonIndex < pokemonList.length - 1 ? (
-				<button type="button" onClick={handleClickNext}>
-					{" "}
-					Suivant{" "}
-				</button>
-			) : (
-				""
-			)}
-		</div>
-	);
-}
+		</>
+	)}
+	
 export default App;
