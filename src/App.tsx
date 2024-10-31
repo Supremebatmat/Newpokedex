@@ -43,5 +43,6 @@ function App() {
 			<PokemonCard pokemon={pokemonList[pokemonIndex]} />
 		</div>
 	);
+}
 
 export default App;
