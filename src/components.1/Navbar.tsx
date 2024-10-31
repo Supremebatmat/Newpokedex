@@ -1,3 +1,5 @@
+import React from "react";
+
 interface Pokemon {
 	name: string;
 	imgSrc?: string;
@@ -8,14 +10,19 @@ interface NavBarProps {
 	pokemonList: Pokemon[];
 }
 
-function NavBar({ setPokemonIndex, pokemonIndex, pokemonList }): NavBarProps {
+function NavBar({ setPokemonIndex, pokemonList }: NavBarProps) {
 	return (
 		<nav>
 			{pokemonList.map((pokemon, index) => (
 				<button
 					key={pokemon.name}
 					type="button"
-					onClick={() => setPokemonIndex(index)}
+					onClick={() => {
+						setPokemonIndex(index);
+						if (pokemon.name === "pikachu") {
+							alert("Pika Pikachu !!!");
+						}
+					}}
 				>
 					{pokemon.name}
 				</button>
